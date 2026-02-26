@@ -1,5 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+
+  // Add the CSS file here
+  css: [
+    'bootstrap/dist/css/bootstrap.min.css',
+    '@/assets/css/main.css'
+  ],
+
+  app: {
+    head: {
+      // Adding Bootstrap JS so dropdowns and the Drawers work
+      script: [
+        {
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',
+          tagPosition: 'bodyClose'
+        }
+      ]
+    }
+  }
 })
