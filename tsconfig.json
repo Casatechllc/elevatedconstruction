@@ -3,13 +3,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./app/*"],
+      "@/*": ["./app/*"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.vue",
-    "assets/css/main.css" 
+    "app/assets/css/main.css" 
   ]
 }

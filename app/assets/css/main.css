@@ -55,3 +55,101 @@ h1, h2, h3, h4 {
   font-family: var(--font-family-headings);
   font-weight: var(--font-weight-bold);
 }
+
+/* Override Bootstrap Utility Colors with Your Brand Variables */
+
+.text-primary {
+  color: var(--color-primary) !important; /* Deep Purple */
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important; /* Golden Yellow */
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+/* Fix for the Service Card Icons since they use text-primary */
+.bi.text-primary {
+  color: var(--color-primary) !important;
+}
+
+/* Button Overrides */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-light);
+  transition: var(--transition-default);
+}
+
+.btn-primary:hover {
+  background-color: #45065c; /* Slightly darker shade of your purple */
+  border-color: #45065c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--primary-shadow);
+}
+
+/* The Quote Button - Using Secondary Golden Yellow */
+.btn-quote-trigger {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
+  transition: var(--transition-default);
+}
+
+.btn-quote-trigger:hover {
+  background-color: #d4ac0d; /* Slightly darker gold */
+  border-color: #d4ac0d;
+  color: var(--color-text-dark);
+}
+
+/* Customizing btn-outline-primary */
+.btn-outline-primary {
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important; /* Thicker border for better visibility */
+  background-color: transparent !important;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover State */
+.btn-outline-primary:hover {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-light) !important; /* Flips text to white */
+  border-color: var(--color-primary) !important;
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 10px rgba(86, 8, 115, 0.2);
+}
+
+/* Active/Focused State */
+.btn-outline-primary:active, .btn-outline-primary:focus {
+  background-color: #45065c !important; /* Slightly darker purple */
+  box-shadow: 0 0 0 0.25rem rgba(86, 8, 115, 0.25) !important;
+}
+
+/* Navbar Customization */
+.navbar {
+  padding: var(--spacing-md) 0;
+}
+
+.nav-link {
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-dark);
+  transition: var(--transition-default);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+/* Force Offcanvas to be hidden on page load before JS kicks in */
+.offcanvas:not(.show) {
+  visibility: hidden;
+  display: none;
+}

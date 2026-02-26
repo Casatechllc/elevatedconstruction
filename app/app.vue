@@ -1,10 +1,19 @@
 <template>
   <div>
-    <nav class="p-3 bg-dark text-white text-center">
-      <!-- Navbar Placeholder (We will build this next!) -->
-    </nav>
+    <ClientOnly>
+      <AppNavbar />
+    </ClientOnly>
 
-    <NuxtPage />
-
-    </div>
+    <main>
+      <NuxtPage />
+    </main>
+  </div>
 </template>
+
+<style>
+/* Global transitions or base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+</style>
