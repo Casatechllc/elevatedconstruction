@@ -2,9 +2,9 @@
   <div class="fixed-top shadow-sm">
     <div class="top-bar py-2">
       <div class="container-fluid px-lg-5 d-flex justify-content-end align-items-center">
-        <a href="tel:5550000000" class="emergency-link d-flex align-items-center">
+        <a :href="`tel:${appConfig.phoneRaw}`" class="emergency-link d-flex align-items-center">
           <span class="pulse-dot me-2">●</span>
-          <span class="fw-bold">24/7 EMERGENCY: (555) 000-0000</span>
+          <span class="fw-bold">24/7 EMERGENCY: {{ appConfig.phoneNumber }}</span>
         </a>
       </div>
     </div>
@@ -27,24 +27,66 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
             
-            <li class="nav-item dropdown text-nowrap">
-              <a class="nav-link dropdown-toggle px-3" href="#" id="resDev" role="button" data-bs-toggle="dropdown">
+            <li class="nav-item dropdown">
+              <NuxtLink 
+                class="nav-link dropdown-toggle" 
+                to="/residential" 
+                role="button" 
+                data-bs-toggle="dropdown"
+                @click="$router.push('/residential')"
+              >
                 Residential
-              </a>
-              <ul class="dropdown-menu border-0 shadow" aria-labelledby="resDev">
-                <!-- <li><NuxtLink class="dropdown-item" to="/residential/water-restoration">Water Restoration</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/residential/remodeling">Remodeling</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/residential/roofing">Roofing</NuxtLink></li> -->
+              </NuxtLink>
+              
+              <ul class="dropdown-menu shadow-lg border-primary">
+                <li>
+                  <NuxtLink class="dropdown-header-link" to="/residential/emergency-recovery">
+                    Emergency Recovery
+                  </NuxtLink>
+                </li>
+                <li><NuxtLink class="dropdown-item" to="/residential/emergency-recovery/water-recovery">Water & Flood Mitigation</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/emergency-recovery/fire-smoke-recovery">Fire & Smoke Damage Care</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/emergency-recovery/mold-remediation">Environmental & Mold Solutions</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/emergency-recovery/emergency-securing">Emergency Board-Up & Tarping</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/emergency-recovery/biohazard-cleanup">Trauma & Biohazard Recovery</NuxtLink></li>
+                
+                <li><hr class="dropdown-divider"></li>
+                
+                <li>
+                  <NuxtLink class="dropdown-header-link" to="/residential/structural-rebuild">
+                    Structural Rebuild
+                  </NuxtLink>
+                </li>
+                <li><NuxtLink class="dropdown-item fw-bold" to="/residential/structural-rebuild/reconstruction">Full-Service Reconstruction</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/structural-rebuild/odor-elimination">Advanced Odor Elimination</NuxtLink></li>
+                
+                <li><hr class="dropdown-divider"></li>
+
+                <li>
+                  <NuxtLink class="dropdown-header-link" to="/residential/specialty-cleaning">
+                    Specialty Surface Cleaning
+                  </NuxtLink>
+                </li>
+                <li><NuxtLink class="dropdown-item" to="/residential/specialty-cleaning/content-restoration">Personal Content Cleaning</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/specialty-cleaning/air-duct-cleaning">Air Duct & HVAC Cleaning</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/specialty-cleaning/surface-cleaning">Floor, Tile & Grout Care</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/residential/specialty-cleaning/carpet-cleaning">Carpet & Fabric Refresh</NuxtLink></li>
               </ul>
             </li>
 
-            <li class="nav-item dropdown text-nowrap">
-              <a class="nav-link dropdown-toggle px-3" href="#" id="commDev" role="button" data-bs-toggle="dropdown">
+            <li class="nav-item dropdown">
+              <NuxtLink 
+                class="nav-link dropdown-toggle px-3" 
+                to="/commercial" 
+                role="button" 
+                data-bs-toggle="dropdown"
+                @click="$router.push('/commercial')"
+              >
                 Commercial
-              </a>
-              <ul class="dropdown-menu border-0 shadow" aria-labelledby="commDev">
-                <!-- <li><NuxtLink class="dropdown-item" to="/commercial/mitigation">Mitigation</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/commercial/build-outs">Build-outs</NuxtLink></li> -->
+              </NuxtLink>
+              <ul class="dropdown-menu border-0 shadow">
+                <li><NuxtLink class="dropdown-item" to="/commercial/mitigation">Mitigation</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/commercial/build-outs">Build-outs</NuxtLink></li>
               </ul>
             </li>
 
@@ -73,38 +115,71 @@
   
   <QuoteDrawer />
 </template>
-<style scoped>
 
-/* Navbar Customization */
+<script setup>
+    const appConfig = useAppConfig()
+</script>
+
+<style scoped>
+/* Navbar Base */
 .navbar {
   padding: var(--spacing-md) 0;
+}
+
+
+.nav-link:hover {
+  color: var(--color-primary);
 }
 
 .nav-link {
   font-weight: var(--font-weight-normal);
   color: var(--color-text-dark);
   transition: var(--transition-default);
+  /* PREVENTS TEXT WRAPPING */
+  white-space: nowrap; 
 }
 
-.nav-link:hover {
-  color: var(--color-primary);
+/* Desktop Fixes for spacing */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    /* Slightly reduced horizontal padding to keep everything on one line */
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  }
+  
+  /* Give the nav more room to expand */
+  .navbar-collapse {
+    flex-grow: 1;
+  }
 }
 
-/* Top Bar Styles */
+/* Specific fix for mid-sized screens (Laptops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-brand { 
+    font-size: 1.1rem; 
+    margin-right: 0.5rem;
+  }
+  .navbar-nav .nav-link { 
+    font-size: 0.85rem; /* Shinks text slightly on smaller laptops to avoid crowding */
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+  }
+}
+
+/* Top Bar & Emergency Pulse */
 .top-bar {
   background-color: var(--color-alert);
-  transition: var(--transition-default);
 }
 
 .emergency-link {
-  color: var(--color-text-light) !important;
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
 
 .pulse-dot {
-  color: var(--color-text-light);
+  color: #ffffff;
   animation: pulse-red 2s infinite;
 }
 
@@ -114,32 +189,56 @@
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* Navbar Spacing Buffer */
 .nav-spacer {
-  height: 120px; /* Adjust this to match the combined height of bar + nav */
+  height: 110px; 
 }
 
-/* Desktop Fixes */
+/* Clickable Dropdown Headers */
+.dropdown-header-link {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-header-link:hover {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+}
+
+/* Hover to open dropdown on Desktop */
 @media (min-width: 992px) {
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+  }
+
   .navbar-nav .nav-link {
     padding-left: 0.8rem !important;
     padding-right: 0.8rem !important;
-    white-space: nowrap;
-  }
-  
-  .navbar-brand {
-    font-size: 1.3rem;
   }
 }
 
-/* Responsive Shrinking for Laptops */
-@media (min-width: 992px) and (max-width: 1200px) {
+/* Responsive Scaling */
+@media (max-width: 1200px) {
   .navbar-brand { font-size: 1.1rem; }
-  .navbar-nav .nav-link { font-size: 0.9rem; padding-left: 0.5rem !important; }
 }
 
-/* Ensure Dropdowns stay clean */
-.dropdown-menu {
-  margin-top: 10px;
+.btn-quote-trigger {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.btn-quote-trigger:hover {
+  background-color: #45065c;
+  transform: translateY(-2px);
 }
 </style>

@@ -43,7 +43,7 @@
     <section class="py-5 bg-white">
       <div class="container py-lg-5">
         <div class="text-center mb-5">
-          <h2 class="text-primary h1">Our Core Services</h2>
+          <h2 class="text-primary h1">How Can We Help?</h2>
           <div class="mx-auto bg-secondary mt-2" style="height: 4px; width: 60px;"></div>
         </div>
         

@@ -94,6 +94,35 @@ h1, h2, h3, h4 {
   box-shadow: 0 4px 8px var(--primary-shadow);
 }
 
+/* Customizing btn-secondary (Golden Yellow) */
+.btn-secondary {
+  background-color: var(--color-secondary) !important;
+  border: 2px solid var(--color-secondary) !important;
+  color: var(--color-primary) !important; /* Purple text on Yellow background */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover State */
+.btn-secondary:hover {
+  background-color: #e5b000 !important; /* Slightly deeper gold */
+  border-color: #e5b000 !important;
+  color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Active/Focus State */
+.btn-secondary:active, .btn-secondary:focus {
+  background-color: #cca000 !important;
+  border-color: #cca000 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.3) !important;
+  transform: translateY(0);
+}
+
 /* The Quote Button - Using Secondary Golden Yellow */
 .btn-quote-trigger {
   background-color: var(--color-secondary);
@@ -133,19 +162,24 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 0 0.25rem rgba(86, 8, 115, 0.25) !important;
 }
 
-/* Navbar Customization */
-.navbar {
-  padding: var(--spacing-md) 0;
+/* Update Bootstrap's Primary Border to Deep Purple */
+.border-primary {
+  border-color: var(--color-primary) !important;
+  border-width: 2px !important;
+  border-style: solid;
 }
 
-.nav-link {
-  font-weight: var(--font-weight-normal);
-  color: var(--color-text-dark);
-  transition: var(--transition-default);
+/* Update Bootstrap's Secondary Border to Golden Yellow */
+.border-secondary {
+  border-color: var(--color-secondary) !important;
+  border-width: 2px !important;
+  border-style: solid;
 }
 
-.nav-link:hover {
-  color: var(--color-primary);
+/* Optional: Soften the look for certain containers */
+.border-light-subtle {
+  border-color: #dee2e6 !important;
+  border-width: 1px !important;
 }
 
 /* Force Offcanvas to be hidden on page load before JS kicks in */

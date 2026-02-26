@@ -1,18 +1,43 @@
+<script setup>
+const instanceId = Math.random().toString(36).substring(2, 9);
+const lowId = `low-${instanceId}`;
+const highId = `high-${instanceId}`;
+
+const handleSubmit = () => {
+  alert("Quote Request Sent! We'll contact you shortly.");
+};
+</script>
+
 <template>
   <form @submit.prevent="handleSubmit" class="row g-3">
-    <div class="col-12">
-      <label class="form-label fw-bold">Full Name</label>
-      <input type="text" class="form-control" placeholder="John Doe" required />
+    <div class="col-md-6">
+      <label class="form-label fw-bold small text-uppercase ls-1">Full Name</label>
+      <input type="text" class="form-control custom-field" placeholder="John Doe" required />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label fw-bold small text-uppercase ls-1">Phone Number</label>
+      <input type="tel" class="form-control custom-field" placeholder="(555) 000-0000" required />
     </div>
 
     <div class="col-12">
-      <label class="form-label fw-bold">Phone Number</label>
-      <input type="tel" class="form-control" placeholder="(555) 000-0000" required />
+      <label class="form-label fw-bold small text-uppercase ls-1">Service Location</label>
+      <div class="input-group">
+        <span class="input-group-text bg-light border-end-0 border-dee2e6">
+          <i class="bi bi-geo-alt-fill text-secondary"></i>
+        </span>
+        <input 
+          type="text" 
+          class="form-control custom-field border-start-0" 
+          placeholder="e.g. Harrisonburg, VA or 22812" 
+          required 
+        />
+      </div>
     </div>
 
     <div class="col-12">
-      <label class="form-label fw-bold">Service Needed</label>
-      <select class="form-select" required>
+      <label class="form-label fw-bold small text-uppercase ls-1">Service Needed</label>
+      <select class="form-select custom-field" required>
         <option value="" selected disabled>Select a service...</option>
         <option value="water">Water Damage Restoration</option>
         <option value="mold">Mold Remediation</option>
@@ -22,99 +47,69 @@
     </div>
 
     <div class="col-12">
-      <label class="form-label fw-bold">Urgency Level</label>
+      <label class="form-label fw-bold small text-uppercase ls-1">Urgency Level</label>
       <div class="d-flex gap-2">
-        <div class="form-check rounded flex-fill text-center">
-          <input class="form-check-input d-none" type="radio" name="urgency" id="low" value="low">
-          <label class="form-check-label w-100" for="low">Standard</label>
+        <div class="flex-fill">
+          <input class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="lowId" value="low" checked>
+          <label class="urgency-tile" :for="lowId">Standard</label>
         </div>
-        <div class="flex-fill text-center emergency-group">
-            <input type="radio" name="urgency" id="high" class="form-check-input">
-            <label class="form-check-label" for="high">Emergency</label>
+        <div class="flex-fill">
+          <input class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="highId" value="high">
+          <label class="urgency-tile emergency-tile" :for="highId">Emergency</label>
         </div>
       </div>
     </div>
 
     <div class="col-12">
-      <label class="form-label fw-bold">Message / Details</label>
-      <textarea class="form-control" rows="3" placeholder="Tell us about the project..."></textarea>
+      <label class="form-label fw-bold small text-uppercase ls-1">Message / Details</label>
+      <textarea class="form-control custom-field" rows="3" placeholder="Tell us about the project..."></textarea>
     </div>
 
     <div class="col-12 mt-4">
-      <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
+      <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm">
         Send Request
       </button>
     </div>
   </form>
 </template>
 
-<script setup>
-const handleSubmit = () => {
-  alert("Quote Request Sent! We'll contact you shortly.");
-  // Later, we can connect this to EmailJS or a backend API
-};
-</script>
-
 <style scoped>
-/* Hide the actual radio circle */
-.form-check-input {
-  display: none;
+.border-dee2e6 {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px 0 0 8px;
 }
 
-/* Base style for the labels (The "Tiles") */
-.form-check-label {
-  cursor: pointer;
-  display: block;
-  padding: var(--spacing-sm);
-  border: 2px solid #dee2e6; 
-  border-radius: var(--border-radius);
-  transition: var(--transition-default);
-  font-weight: var(--font-weight-bold);
-  background-color: transparent;
-  color: var(--color-text-dark); /* Default text color */
+.custom-field {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6 !important;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-/* "Standard" Selected State -> Purple with White Text */
-#low:checked + .form-check-label {
+/* Rest of your existing CSS logic for urgency-radio, tiles, etc. */
+.urgency-radio:checked + .urgency-tile {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
-  color: var(--color-text-light) !important; /* Forces text to be white */
+  color: #fff !important;
 }
 
-/* "Emergency" Selected State -> Red with White Text */
-#high:checked + .form-check-label {
+.urgency-radio:checked + .emergency-tile {
   background-color: var(--color-alert) !important;
   border-color: var(--color-alert) !important;
-  color: var(--color-text-light) !important; /* Forces text to be white */
+  color: #fff !important;
 }
 
-/* --- Standard Button Hover (Purple) --- */
-.form-check-label:hover {
-  border-color: var(--color-primary);
-  background-color: rgba(86, 8, 115, 0.05); /* Purple tint */
+.urgency-tile {
+  cursor: pointer;
+  display: block;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
 }
 
-/* --- Emergency Button Hover (Red) --- */
-/* This targets the label specifically inside the emergency group */
-.emergency-group .form-check-label:hover {
-  border-color: var(--color-alert);
-  background-color: rgba(236, 14, 14, 0.05); /* Red tint (Red rgba) */
-  color: var(--color-alert);
-}
-
-/* --- When ALREADY Checked --- */
-
-/* Standard (Keep Purple) */
-#low:checked + .form-check-label:hover {
-  background-color: #45065c !important; 
-  border-color: #45065c !important;
-  color: var(--color-text-light) !important;
-}
-
-/* Emergency (Keep Red) */
-#high:checked + .form-check-label:hover {
-  background-color: #b30a0a !important; /* Darker Red */
-  border-color: #b30a0a !important;
-  color: var(--color-text-light) !important;
-}
+.ls-1 { letter-spacing: 1px; }
 </style>

@@ -1,17 +1,27 @@
+<script setup>
+defineProps({
+  isInline: { type: Boolean, default: false }
+})
+</script>
+
 <template>
   <div 
-    class="offcanvas offcanvas-end" 
-    tabindex="-1" 
-    id="quoteDrawer" 
-    aria-labelledby="quoteDrawerLabel"
+    :class="[isInline ? '' : 'offcanvas offcanvas-end quote-drawer-custom']" 
+    id="quoteDrawer"
+    tabindex="-1"
   >
-    <div class="offcanvas-header bg-dark text-white">
-      <h5 class="offcanvas-title" id="quoteDrawerLabel">Request a Quote</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div v-if="!isInline" class="offcanvas-header border-bottom">
+      <h3 class="offcanvas-title fw-bold text-primary">Request a Quote</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-    <div class="offcanvas-body">
-      <p class="text-muted">Fill out the details below and our team will reach out shortly.</p>
+
+    <div :class="isInline ? '' : 'offcanvas-body'">
       <QuoteForm />
     </div>
   </div>
 </template>
+
+<style scoped>
+.quote-drawer-custom { width: 450px; }
+@media (max-width: 576px) { .quote-drawer-custom { width: 100%; } }
+</style>

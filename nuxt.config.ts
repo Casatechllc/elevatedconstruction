@@ -4,6 +4,12 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  appConfig: {
+    phoneNumber: '(555) 000-0000',
+    phoneRaw: '5550000000', // No dashes or spaces for the "tel:" link
+    email: 'info@elevatedconstruction.com',
+    address: '123 Elevated Way, Bridgewater, VA 22812'
+  },
 
   // Add the CSS file here
   css: [
