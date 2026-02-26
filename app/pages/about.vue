@@ -1,84 +1,98 @@
 <template>
   <div class="about-page">
-    <section class="bg-primary py-5 text-white position-relative overflow-hidden">
-      <div class="container py-lg-5 text-center position-relative z-index-1">
-        <h6 class="text-secondary fw-bold text-uppercase ls-2 mb-3">Our Legacy</h6>
-        <h1 class="display-3 fw-bold mb-4">Building Trust Since 2001</h1>
-        <p class="lead mx-auto opacity-75" style="max-width: 700px;">
-          Elevated Construction was founded on a simple promise: to treat every property restoration as if it were our own family home.
+    <section class="bg-primary text-white py-5">
+      <div class="container py-lg-5 text-center">
+        <h6 class="text-secondary fw-bold text-uppercase ls-2 mb-3">Our Mission</h6>
+        <h1 class="display-3 fw-bold mb-4">Restoring Peace of Mind</h1>
+        <p class="lead mx-auto opacity-90" style="max-width: 800px;">
+          Elevated Construction was founded on a simple principle: to lead with integrity and high-end craftsmanship during our neighbors' most difficult moments.
         </p>
       </div>
-      <div class="bg-shape"></div>
     </section>
 
-    <<Breadcrumbs class="mb-4" />
+    <Breadcrumbs class="py-3 border-bottom mb-5" />
 
-    <section class="py-5">
-      <div class="container py-lg-5">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
+    <section class="container mb-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="text-primary fw-bold mb-4">Integrity in Every Inch</h2>
+          <p class="text-muted mb-4">
+            Founded in the heart of the Shenandoah Valley, Elevated Construction was built to provide a higher standard of service for property restoration and reconstruction. We recognized that homeowners and business owners were often left in the dark during complex insurance claims or structural rebuilds.
+          </p>
+          <p class="text-muted mb-4">
+            Today, we are a <strong>Class A Contractor</strong> specialized in "The Total Recovery." This means we don't just mitigate the damage; we stay on-site to handle the complete architectural rebuild, ensuring that the final result is even better than the pre-loss condition.
+          </p>
+          
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-3 border-start border-4 border-secondary bg-light">
+                <h6 class="fw-bold mb-1">Local Roots</h6>
+                <p class="x-small mb-0 text-muted">Proudly serving Bridgewater, Harrisonburg, and the surrounding 60-mile radius.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 border-start border-4 border-secondary bg-light">
+                <h6 class="fw-bold mb-1">Master Class</h6>
+                <p class="x-small mb-0 text-muted">High-tier licensing and certifications in every restoration category.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="position-relative">
             <img 
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800" 
-              alt="Construction site" 
-              class="img-fluid rounded shadow-lg border-primary border-bottom border-5 p-0"
+              src="https://images.unsplash.com/photo-1541913057-362241512c01?auto=format&fit=crop&q=80&w=800" 
+              alt="Class A Contractor team reviewing construction blueprints on-site" 
+              class="img-fluid rounded-4 shadow-lg"
             >
-          </div>
-          <div class="col-lg-6">
-            <h2 class="text-primary fw-bold mb-4">The Elevated Standard</h2>
-            <p class="text-muted mb-4">
-              Headquartered in **Bridgewater, Virginia**, we have spent over two decades serving the Shenandoah Valley. What started as a small local remodeling crew has grown into a premier full-service restoration and construction firm.
-            </p>
-            <p class="text-muted mb-4">
-              We understand that property damage—whether from fire, water, or storm—is more than just a logistical hurdle; it’s a life-altering event. That’s why our approach combines technical precision with genuine empathy.
-            </p>
-            
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="d-flex align-items-center p-3 border rounded shadow-sm">
-                  <i class="bi bi-shield-check-fill text-secondary fs-4 me-3"></i>
-                  <span class="fw-bold text-primary">Fully Licensed & Insured</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="d-flex align-items-center p-3 border rounded shadow-sm">
-                  <i class="bi bi-clock-history text-secondary fs-4 me-3"></i>
-                  <span class="fw-bold text-primary">24/7 Emergency Response</span>
-                </div>
-              </div>
+            <div class="stats-badge shadow-lg d-none d-md-block">
+              <span class="h2 fw-bold text-secondary mb-0">25+</span>
+              <p class="small fw-bold mb-0 text-white">YEARS OF<br>EXPERIENCE</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="text-primary fw-bold">Driven by Our Values</h2>
-          <div class="mx-auto bg-secondary mt-2" style="width: 60px; height: 4px;"></div>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4" v-for="value in values" :key="value.title">
-            <div class="card h-100 border-0 shadow-sm p-4 text-center">
-              <div class="icon-box bg-primary text-white mx-auto mb-3">
-                <i :class="value.icon"></i>
-              </div>
-              <h5 class="fw-bold text-primary">{{ value.title }}</h5>
-              <p class="text-muted small mb-0">{{ value.text }}</p>
-            </div>
+      <div class="row g-4 mt-5 pt-lg-5">
+        <div class="col-md-4 text-center">
+          <div class="icon-circle mx-auto bg-light mb-3">
+            <i class="bi bi-shield-check text-primary fs-3"></i>
           </div>
+          <h5 class="fw-bold">Transparency</h5>
+          <p class="small text-muted">No hidden costs or confusing jargon. We use industry-standard Xactimate pricing and provide detailed photo logs of every step.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="icon-circle mx-auto bg-light mb-3">
+            <i class="bi bi-tools text-primary fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Craftsmanship</h5>
+          <p class="small text-muted">As a Class A Master Contractor, we don't settle for "good enough." We build for longevity, safety, and aesthetic excellence.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="icon-circle mx-auto bg-light mb-3">
+            <i class="bi bi-people-fill text-primary fs-3"></i>
+          </div>
+          <h5 class="fw-bold">Community</h5>
+          <p class="small text-muted">We live where we work. Our priority is restoring the homes and businesses of our neighbors with speed and compassion.</p>
         </div>
       </div>
-    </section>
 
-    <section class="py-5 bg-primary text-white text-center">
-      <div class="container py-4">
-        <h2 class="fw-bold mb-4">Ready to start your project?</h2>
-        <div class="d-flex justify-content-center gap-3">
-          <NuxtLink to="/contact" class="btn btn-secondary btn-lg rounded-pill px-5 fw-bold text-primary">
-            Get a Free Quote
-          </NuxtLink>
+      <div class="bg-primary text-white p-4 p-lg-5 rounded-4 mt-5 shadow">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h3 class="fw-bold mb-3 text-secondary">Ready to Start Your Project?</h3>
+            <p class="mb-0 opacity-75">Whether you're facing an emergency or planning a custom renovation, our leadership team is ready to provide the expertise your property deserves.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <button 
+              class="btn btn-secondary btn-lg rounded-pill px-5 fw-bold"
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#quoteDrawer"
+            >
+              Get a Quote
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -86,58 +100,31 @@
 </template>
 
 <script setup>
-import Breadcrumbs from '~/components/Breadcrumbs.vue';
-
-const values = [
-  { 
-    title: 'Integrity', 
-    icon: 'bi-hand-thumbs-up-fill', 
-    text: 'We do what we say we will do, when we say we will do it. No shortcuts.' 
-  },
-  { 
-    title: 'Quality', 
-    icon: 'bi-gem', 
-    text: 'Our work is built to last, meeting and exceeding local Virginia building codes.' 
-  },
-  { 
-    title: 'Community', 
-    icon: 'bi-house-heart-fill', 
-    text: 'We live where we work. We take pride in restoring our neighbors’ peace of mind.' 
-  }
-]
+const appConfig = useAppConfig()
 </script>
 
 <style scoped>
-.ls-2 { letter-spacing: 2px; }
-
-.icon-box {
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(86, 8, 115, 0.05);
 }
 
-.bg-shape {
+.stats-badge {
   position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 400px;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  z-index: 0;
+  bottom: -20px;
+  left: 20px;
+  background-color: var(--color-primary);
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  border-bottom: 5px solid var(--color-secondary);
 }
 
-.z-index-1 {
-  position: relative;
-  z-index: 1;
-}
-
-/* Ensuring border-primary utility works as intended */
-.border-primary {
-  border-color: var(--color-primary) !important;
-}
+.x-small { font-size: 0.85rem; }
+.ls-2 { letter-spacing: 2px; }
 </style>

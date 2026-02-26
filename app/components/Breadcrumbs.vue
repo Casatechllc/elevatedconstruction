@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="breadcrumb" class="bg-light py-2 border-bottom shadow-sm">
+  <nav aria-label="breadcrumb" class="navbar bg-light py-2 border-bottom shadow-sm">
     <div class="container">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item">
@@ -35,18 +35,39 @@ const route = useRoute();
 
 // This map translates your URL slugs into the "Elevated" titles you want
 const titleMap = {
-  'residential': 'Residential',
-  'emergency-recovery': 'Emergency Recovery',
-  'water-recovery': 'Water & Flood Mitigation',
-  'fire-smoke-recovery': 'Fire & Smoke Damage Care',
-  'mold-remediation': 'Environmental & Mold Solutions',
-  'emergency-securing': 'Board-Up & Tarping',
-  'biohazard-recovery': 'Trauma & Biohazard Recovery',
-  'reconstruction': 'Full-Service Reconstruction',
+    // Main Hubs
+  'services': 'Services',
+  'info': 'Information',
+  'remodeling': 'Remodeling',
+  
+  // Group A: Disaster Recovery
+  'disaster-recovery': 'Disaster Recovery',
+  'water-flood': 'Water & Flood Mitigation',
+  'fire-smoke': 'Fire & Smoke Damage',
+  'storm-wind': 'Storm & Wind Damage',
+  'mold-environmental': 'Environmental & Mold',
+  
+  // Group B: Property Rebuild & Remodeling
+  'rebuild-remodel': 'Rebuild & Remodeling',
+  'structural-reconstruction': 'Structural Reconstruction',
+  'residential-remodeling': 'Residential Remodeling',
+  'commercial-remodeling': 'Commercial Remodeling',
+  
+  // Group C: Specialty Care
+  'specialty-care': 'Specialty Care',
+  'air-duct-cleaning': 'Air Duct & HVAC',
+  'surface-cleaning': 'Specialty Surface Cleaning',
+  'biohazard-trauma': 'Biohazard & Trauma',
+  'emergency-power': 'Emergency Power & Logistics',
+  
+  // Group D: Information Hub
+  'priority-program': 'First Priority Program',
+  'industries-served': 'Industries We Serve',
+  'insurance-professionals': 'Insurance Professionals',
+  'resource-center': 'Resource Center',
+
   'contact': 'Contact Us',
   'about': 'About Our Team',
-  'structural-rebuild': 'Structural Rebuild',
-  'odor-elimination' : 'Odor Elimination'
 };
 
 const breadcrumbs = computed(() => {
@@ -67,6 +88,10 @@ const breadcrumbs = computed(() => {
 </script>
 
 <style scoped>
+.navbar {
+    border-top: var(--color-secondary) solid 3px;
+}
+
 .breadcrumb-item + .breadcrumb-item::before {
   content: "›" !important; /* Elegant chevron divider */
   font-size: 1.2rem;

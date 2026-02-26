@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['title', 'desc', 'icon'])
+defineProps(['title', 'desc', 'icon', 'link'])
 </script>
 
 <template>
@@ -10,7 +10,7 @@ defineProps(['title', 'desc', 'icon'])
       </div>
       <h4 class="fw-bold">{{ title }}</h4>
       <p class="text-muted small">{{ desc }}</p>
-      <NuxtLink to="/services" class="text-primary fw-bold text-decoration-none mt-auto">
+      <NuxtLink :to="`${link}`" class="text-primary fw-bold text-decoration-none mt-auto">
         Learn More →
       </NuxtLink>
     </div>
