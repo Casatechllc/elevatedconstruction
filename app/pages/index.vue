@@ -97,7 +97,7 @@
               <ul class="list-unstyled mb-4 small">
                 <li><i class="bi bi-check2 text-secondary me-2"></i>Air Duct Cleaning</li>
                 <li><i class="bi bi-check2 text-secondary me-2"></i>Surface Decontamination</li>
-                <li><i class="bi bi-check2 text-secondary me-2"></i>Biohazard & Trauma</li>
+                <li><i class="bi bi-check2 text-secondary me-2"></i>Emergency Power</li>
               </ul>
               <NuxtLink to="/services/specialty-care" class="btn btn-outline-primary w-100 rounded-pill">View Specialty</NuxtLink>
             </div>

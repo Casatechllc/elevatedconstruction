@@ -53,7 +53,6 @@
                 <li><NuxtLink class="dropdown-header-link" to="/services/specialty-care">Specialty Care</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/air-duct-cleaning">Air Duct & HVAC</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/surface-cleaning">Specialty Surface Cleaning</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/services/specialty-care/biohazard-trauma">Biohazard & Trauma</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/emergency-power">Emergency Power</NuxtLink></li>
               </ul>
             </li>

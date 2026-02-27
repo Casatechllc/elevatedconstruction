@@ -113,12 +113,6 @@ const specialties = [
     link: '/services/specialty-care/surface-cleaning' 
   },
   { 
-    title: 'Biohazard & Trauma', 
-    icon: 'bi-capsule', 
-    desc: 'Discreet, compassionate, and forensic-grade cleaning for bio-contamination and trauma scenes.',
-    link: '/services/specialty-care/biohazard-trauma' 
-  },
-  { 
     title: 'Emergency Power', 
     icon: 'bi-lightning-charge', 
     desc: 'Temporary power solutions and logistics support for properties during critical outages.',

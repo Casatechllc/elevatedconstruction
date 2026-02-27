@@ -34,7 +34,6 @@
             <li><NuxtLink to="/services/disaster-recovery/fire-smoke">Fire & Smoke Damage</NuxtLink></li>
             <li><NuxtLink to="/services/disaster-recovery/storm-wind">Storm & Wind Damage</NuxtLink></li>
             <li><NuxtLink to="/services/disaster-recovery/mold-environmental">Environmental & Mold</NuxtLink></li>
-            <li><NuxtLink to="/services/specialty-care/biohazard-trauma">Biohazard & Trauma</NuxtLink></li>
           </ul>
         </div>
 
