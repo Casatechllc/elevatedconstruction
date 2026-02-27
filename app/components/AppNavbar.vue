@@ -47,7 +47,6 @@
                 <li><NuxtLink class="dropdown-header-link" to="/services/rebuild-remodel">Rebuild & Remodeling</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item fw-bold" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/commercial-remodeling">Commercial Remodeling</NuxtLink></li>
                 
                 <li><hr class="dropdown-divider"></li>
 

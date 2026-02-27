@@ -40,10 +40,10 @@
               <h3 class="fw-bold text-primary h4">Disaster Recovery</h3>
               <p class="text-muted small">24/7 mitigation to stop damage and stabilize your environment.</p>
               <ul class="list-unstyled mb-4 flex-grow-1 service-list">
-                <li><NuxtLink to="/services/water-flood">Water & Flood Mitigation</NuxtLink></li>
-                <li><NuxtLink to="/services/fire-smoke">Fire & Smoke Damage</NuxtLink></li>
-                <li><NuxtLink to="/services/storm-wind">Storm & Wind Damage</NuxtLink></li>
-                <li><NuxtLink to="/services/mold-environmental">Environmental & Mold</NuxtLink></li>
+                <li><NuxtLink to="/services/disaster-recovery/water-flood">Water & Flood Mitigation</NuxtLink></li>
+                <li><NuxtLink to="/services/disaster-recovery/fire-smoke">Fire & Smoke Damage</NuxtLink></li>
+                <li><NuxtLink to="/services/disaster-recovery/storm-wind">Storm & Wind Damage</NuxtLink></li>
+                <li><NuxtLink to="/services/disaster-recovery/mold-environmental">Environmental & Mold</NuxtLink></li>
               </ul>
               <NuxtLink to="/services/disaster-recovery" class="btn btn-primary rounded-pill w-100">View Recovery Hub</NuxtLink>
             </div>
@@ -57,10 +57,8 @@
               <h3 class="fw-bold text-primary h4">Rebuild & Remodeling</h3>
               <p class="text-muted small">A-Z reconstruction from structural framing to luxury interior finishes.</p>
               <ul class="list-unstyled mb-4 flex-grow-1 service-list">
-                <li><NuxtLink to="/services/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
-                <li><NuxtLink to="/services/residential-remodeling">Residential Remodeling</NuxtLink></li>
-                <li><NuxtLink to="/services/commercial-remodeling">Commercial Remodeling</NuxtLink></li>
-                <li><NuxtLink to="/services/odor-elimination">Advanced Deodorization</NuxtLink></li>
+                <li><NuxtLink to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
+                <li><NuxtLink to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
               </ul>
               <NuxtLink to="/services/rebuild-remodel" class="btn btn-primary rounded-pill w-100">View Rebuild Hub</NuxtLink>
             </div>
@@ -74,10 +72,9 @@
               <h3 class="fw-bold text-primary h4">Specialty Care</h3>
               <p class="text-muted small">High-detail cleaning and hazardous material management.</p>
               <ul class="list-unstyled mb-4 flex-grow-1 service-list">
-                <li><NuxtLink to="/services/air-duct-cleaning">Air Duct & HVAC</NuxtLink></li>
-                <li><NuxtLink to="/services/surface-cleaning">Specialty Surface Cleaning</NuxtLink></li>
-                <li><NuxtLink to="/services/biohazard-trauma">Biohazard & Trauma</NuxtLink></li>
-                <li><NuxtLink to="/services/emergency-power">Power & Logistics</NuxtLink></li>
+                <li><NuxtLink to="/services/specialty-care/air-duct-cleaning">Air Duct & HVAC</NuxtLink></li>
+                <li><NuxtLink to="/services/specialty-care/surface-cleaning">Specialty Surface Cleaning</NuxtLink></li>
+                <li><NuxtLink to="/services/specialty-care/emergency-power">Power & Logistics</NuxtLink></li>
               </ul>
               <NuxtLink to="/services/specialty-care" class="btn btn-primary rounded-pill w-100">View Specialty Hub</NuxtLink>
             </div>
