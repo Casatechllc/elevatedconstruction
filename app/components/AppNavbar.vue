@@ -45,7 +45,7 @@
                 <li><hr class="dropdown-divider"></li>
                 
                 <li><NuxtLink class="dropdown-header-link" to="/services/rebuild-remodel">Rebuild & Remodeling</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item fw-bold" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
                 
                 <li><hr class="dropdown-divider"></li>
@@ -62,7 +62,7 @@
                 Information
               </p>
               <ul class="dropdown-menu shadow-lg border-primary">
-                <li><NuxtLink class="dropdown-item fw-bold" to="/info/priority-program">First Priority Program</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/info/priority-program">First Priority Program</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/info/industries-served">Industries We Serve</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/info/insurance-professionals">Insurance Professionals</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/info/resource-center">Resource Center</NuxtLink></li>
@@ -263,5 +263,9 @@ if (process.client) {
   background-color: #45065c;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(86, 8, 115, 0.3);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-secondary);
 }
 </style>

@@ -219,9 +219,14 @@
           <div class="col-lg-7 ps-lg-5 mt-5 mt-lg-0">
             <div class="map-placeholder rounded shadow-lg d-flex align-items-center justify-content-center">
                <div class="text-center p-4">
-                 <i class="bi bi-geo-fill display-1 text-white opacity-25"></i>
+                <img 
+                  src="/bridgewater-area-map.jpg" 
+                  alt="Elevated Construction Service Areas in Virginia" 
+                  class="img-fluid map-image"
+                >
+                 <!-- <i class="bi bi-geo-fill display-1 text-white opacity-25"></i>
                  <h4 class="text-white fw-bold mt-3">24/7 Mobile Response Units</h4>
-                 <p class="text-white opacity-75 small mb-0">Harrisonburg • Staunton • Waynesboro • Charlottesville • Lexington</p>
+                 <p class="text-white opacity-75 small mb-0">Harrisonburg • Staunton • Waynesboro • Charlottesville • Lexington</p> -->
                </div>
             </div>
           </div>
@@ -293,9 +298,10 @@ const cities = ['Harrisonburg', 'Staunton', 'Waynesboro', 'Charlottesville', 'El
   border-bottom: 5px solid var(--color-secondary);
 }
 
-.map-placeholder {
+.map-placeholder .map-image {
   height: 400px;
-  background: linear-gradient(45deg, var(--color-primary), #4a0072);
+  object-fit: cover;
+  /* background: linear-gradient(45deg, var(--color-primary), #4a0072); */
   border: 4px solid #fff;
 }
 </style>
