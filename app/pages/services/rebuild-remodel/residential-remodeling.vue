@@ -39,13 +39,13 @@
           <div class="row g-3 my-5">
             <div class="col-md-6">
               <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1556912177-f513332be39a?auto=format&fit=crop&q=80&w=800" alt="Kitchen Before" class="img-fluid rounded-3 grayscale">
+                <img src="/kitchen-before.png" alt="Kitchen Before" class="img-fluid rounded-3 grayscale">
                 <span class="badge bg-dark position-absolute top-0 start-0 m-3">THE CHALLENGE</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1556911220-e15224bbafb0?auto=format&fit=crop&q=80&w=800" alt="Kitchen After" class="img-fluid rounded-3 shadow">
+                <img src="/kitchen-after.png" alt="Kitchen After" class="img-fluid rounded-3 shadow">
                 <span class="badge bg-secondary text-primary position-absolute top-0 start-0 m-3 fw-bold">THE ELEVATED RESULT</span>
               </div>
             </div>

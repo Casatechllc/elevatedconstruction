@@ -42,7 +42,7 @@
         <div class="col-lg-6">
           <div class="position-relative">
             <img 
-              src="https://images.unsplash.com/photo-1541913057-362241512c01?auto=format&fit=crop&q=80&w=800" 
+              src="/ec-logo-white.jpg" 
               alt="Class A Contractor team reviewing construction blueprints on-site" 
               class="img-fluid rounded-4 shadow-lg"
             >
@@ -116,13 +116,13 @@ const appConfig = useAppConfig()
 
 .stats-badge {
   position: absolute;
-  bottom: -20px;
+  top: -20px;
   left: 20px;
   background-color: var(--color-primary);
   padding: 20px 30px;
   border-radius: 8px;
   text-align: center;
-  border-bottom: 5px solid var(--color-secondary);
+  border-top: 5px solid var(--color-secondary);
 }
 
 .x-small { font-size: 0.85rem; }

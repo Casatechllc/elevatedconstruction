@@ -68,6 +68,7 @@ const titleMap = {
 
   'contact': 'Contact Us',
   'about': 'About Our Team',
+  'portfolio': 'View Our Work'
 };
 
 const breadcrumbs = computed(() => {
