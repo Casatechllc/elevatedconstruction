@@ -248,7 +248,7 @@ const cities = ['Harrisonburg', 'Staunton', 'Waynesboro', 'Charlottesville', 'El
 .hero-section {
   min-height: 85vh;
   background: linear-gradient(rgba(86, 8, 115, 0.75), rgba(26, 26, 26, 0.85)), 
-              url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+              url('/ec-home-header.png') center/cover no-repeat;
   margin-top: -2px;
 }
 
