@@ -250,6 +250,7 @@ const cities = ['Harrisonburg', 'Staunton', 'Waynesboro', 'Charlottesville', 'El
 </script>
 
 <style scoped>
+
 .hero-section {
   min-height: 85vh;
   background: linear-gradient(rgba(86, 8, 115, 0.75), rgba(26, 26, 26, 0.85)), 

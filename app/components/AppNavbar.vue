@@ -1,7 +1,11 @@
 <template>
   <div class="fixed-top shadow-sm main-nav-wrapper">
-    <div class="top-bar py-2">
-      <div class="container-fluid px-lg-5 d-flex justify-content-end align-items-center">
+    <div class="top-bar d-flex align-items-center">
+      <div class="top-bar-left d-none d-sm-flex px-lg-5 ps-3 align-items-center">
+        <span class="motto-text fw-bold text-primary text-uppercase ls-1 small">Water Mitifation, Mold Remediation, Remodels/Repair, Demolition, and Fencing</span>
+      </div>
+      
+      <div class="top-bar-right py-2 pe-lg-5 pe-3 d-flex justify-content-end align-items-center ms-auto">
         <a :href="`tel:${appConfig.phoneRaw}`" class="emergency-link d-flex align-items-center">
           <span class="pulse-dot me-2">●</span>
           <span class="fw-bold">24/7 EMERGENCY: {{ appConfig.phoneNumber }}</span>
@@ -9,12 +13,24 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-white position-relative">
+    <nav class="navbar navbar-expand-md bg-white position-relative">
       <div class="container-fluid ps-0 pe-lg-5">
         
-        <NuxtLink class="navbar-brand-expanded rounded" to="/">
-          <img src="/ec-logo-long-transparent.png" alt="Elevated Construction Logo">
+        <NuxtLink class="navbar-brand ps-3 ps-lg-5 py-0" to="/">
+          <img 
+            src="/ec-logo-small.png" 
+            alt="Elevated Construction" 
+            class="nav-logo"
+          >
         </NuxtLink>
+
+        <div class="mobile-title-logo d-flex pt-1 ps-0 align-items-center">
+        <img 
+              src="/ec-title-logo.png" 
+              alt="Elevated Construction" 
+              class="nav-logo"
+            >
+        </div>
         
         <button 
           class="navbar-toggler custom-toggler ms-auto m-2" 
@@ -30,7 +46,6 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
-            
             <li class="nav-item dropdown">
               <p class="nav-link dropdown-toggle px-3 m-0 d-inline-block cursor-pointer" role="button" data-bs-toggle="dropdown">
                 Services
@@ -41,22 +56,17 @@
                 <li><NuxtLink class="dropdown-item" to="/services/disaster-recovery/fire-smoke">Fire & Smoke Damage</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/disaster-recovery/storm-wind">Storm & Wind Damage</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/disaster-recovery/mold-environmental">Environmental & Mold</NuxtLink></li>
-                
                 <li><hr class="dropdown-divider"></li>
-                
                 <li><NuxtLink class="dropdown-header-link" to="/services/rebuild-remodel">Rebuild & Remodeling</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item fw-bold" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
-                
                 <li><hr class="dropdown-divider"></li>
-
                 <li><NuxtLink class="dropdown-header-link" to="/services/specialty-care">Specialty Care</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/air-duct-cleaning">Air Duct & HVAC</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/surface-cleaning">Specialty Surface Cleaning</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/specialty-care/emergency-power">Emergency Power</NuxtLink></li>
               </ul>
             </li>
-
             <li class="nav-item dropdown">
               <p class="nav-link dropdown-toggle px-3 m-0 d-inline-block cursor-pointer" role="button" data-bs-toggle="dropdown">
                 Information
@@ -68,18 +78,15 @@
                 <li><NuxtLink class="dropdown-item" to="/info/resource-center">Resource Center</NuxtLink></li>
               </ul>
             </li>
-
             <li class="nav-item">
               <NuxtLink class="nav-link px-3" to="/about">About Us</NuxtLink>
             </li>
-            
             <li class="nav-item">
               <NuxtLink class="nav-link px-3" to="/contact">Contact</NuxtLink>
             </li>
-            
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0 w-100 w-lg-auto">
+            <li class="nav-item ms-lg-3 mt-3 mt-md-0 w-100 w-md-auto">
               <button 
-                class="btn btn-quote-trigger rounded-pill px-4 w-100 fw-bold shadow-sm" 
+                class="btn btn-quote-trigger rounded-pill px-2 px-md-4 w-100 fw-bold shadow-sm" 
                 data-bs-toggle="offcanvas" 
                 data-bs-target="#quoteDrawer"
               >
@@ -129,54 +136,55 @@ if (process.client) {
 </script>
 
 <style scoped>
+/* * { outline: 1px solid red !important; } */
+
 /* RESET MARGINS AND PADDING COMPLETELY */
 .main-nav-wrapper, .navbar, .container-fluid {
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 
-/* LOGO POSITIONING: Touching Left Side */
-.navbar-brand-expanded {
-  position: absolute;
-  left: 0;      /* Moves it to the absolute left edge */
-  top: -43px;   /* Adjusted to pull it into the top-bar */
-  z-index: 1060;
-  display: block;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  padding: 5px 1.5rem;
-  border-right: var(--color-secondary) solid 2px;
-  border-bottom: var(--color-secondary) solid 2px;
-}
-
-.navbar-brand-expanded img {
-  /* This ensures the height spans both bars while the width stays proportional */
-  height: 105px; 
-  width: auto;
-  object-fit: contain;
-  display: block;
-  /* Shadow helps visibility since it's now touching the edge */
-  filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.15));
-  
-}
-
-.navbar-brand-expanded:hover img {
-  transform: scale(1.03);
-}
-
-/* TOP BAR */
+/* TOP BAR RESTRUCTURE */
 .top-bar { 
-  background-color: var(--color-alert); 
+  background-color: #ffffff; /* Default background is white for the left side */
   margin: 0;
   position: relative;
   z-index: 1040;
+  border-bottom: 1px solid #eee;
+}
+
+.motto-text {
+  font-size: 1rem;
+}
+
+.top-bar-left {
+  flex: 1;
+}
+
+.top-bar-right {
+  background-color: var(--color-alert); /* Red background starts here */
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%); /* Optional: angled cut */
+  padding-left: 2rem !important;
+}
+
+/* NAVBAR & LOGO (Clean & Contained) */
+.navbar {
+  padding: 0.5rem 0;
+  min-height: 70px;
+}
+
+.nav-logo {
+  height: 50px; /* Adjust this to your preferred "smaller" size */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  /* margin-left: 1rem; */
 }
 
 .emergency-link {
   color: #ffffff !important;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
 
@@ -191,7 +199,6 @@ if (process.client) {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* NAV LINKS */
 .nav-link {
   font-weight: var(--font-weight-normal);
   color: var(--color-text-dark);
@@ -200,14 +207,8 @@ if (process.client) {
 }
 .nav-link:hover { color: var(--color-primary); }
 
-@media (max-width: 1085px) {
-  .navbar-brand-expanded {
-    display: none !important;
-  }
-}
 
 @media (min-width: 992px) {
-
   .navbar-nav .dropdown:hover > .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -219,53 +220,59 @@ if (process.client) {
   }
 }
 
-@media (max-width: 991.98px) {
-  .navbar-brand-expanded { top: -38px; left: 1rem; }
-  .navbar-brand-expanded img { height: 90px; }
-  .custom-toggler { margin-left: auto; }
+@media (max-width: 991.98px) {  
+  .nav-logo { height: 40px; }
+  .motto-text {
+    font-size: .7rem;
+  }
 }
 
-/* DROPDOWNS */
-.dropdown-menu {
-  border-top: 4px solid var(--color-primary);
-  border-radius: 0 0 8px 8px;
+@media (max-width: 1215.98px) {  
+  .motto-text {
+    font-size: .8rem;
+  }
 }
 
-.dropdown-header-link {
-  display: block;
-  width: 100%;
-  padding: 0.6rem 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
+@media (max-width: 1072.98px) {  
+  .motto-text {
+    font-size: .7rem;
+  }
 }
 
-.dropdown-header-link:hover {
-  background-color: var(--color-primary);
-  color: #ffffff !important;
+@media (max-width: 767.98px) {
+  .mobile-title-logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: 1rem;
+    transform: translateX(-50%);
+  }
 }
 
-/* SPACER */
+@media (max-width: 622.98px) {  
+  .motto-text {
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+.top-bar-right { clip-path: none; width: 100%; padding-left: 1rem !important; }
+}
+
+@media (max-width: 339.98px) {
+  .mobile-title-logo {
+  display: none !important;
+}
+}
+
+/* DROPDOWNS & BUTTONS */
+.dropdown-menu { border-top: 4px solid var(--color-primary); border-radius: 0 0 8px 8px; }
+.dropdown-header-link { display: block; width: 100%; padding: 0.6rem 1.5rem; font-weight: 700; color: var(--color-primary); text-decoration: none; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+.dropdown-header-link:hover { background-color: var(--color-primary); color: #ffffff !important; }
+.dropdown-item:hover { background-color: var(--color-secondary); }
 .nav-spacer { height: 115px; }
-
-/* QUOTE BUTTON */
-.btn-quote-trigger {
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.btn-quote-trigger:hover {
-  background-color: #45065c;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(86, 8, 115, 0.3);
-}
-
-.dropdown-item:hover {
-    background-color: var(--color-secondary);
-}
+.btn-quote-trigger { background-color: var(--color-primary); color: white; border: none; transition: all 0.3s ease; }
+.btn-quote-trigger:hover { background-color: #45065c; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(86, 8, 115, 0.3); }
+.ls-1 { letter-spacing: 1px; }
+.cursor-pointer { cursor: pointer; }
 </style>

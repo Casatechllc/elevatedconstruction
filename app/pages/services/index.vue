@@ -166,6 +166,7 @@ const appConfig = useAppConfig()
 </script>
 
 <style scoped>
+/* * { outline: 1px solid red !important; } */
 .service-hub-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-top: 5px solid var(--color-primary) !important;
