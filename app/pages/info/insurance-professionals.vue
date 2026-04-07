@@ -22,7 +22,7 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-5">
+      <div class="row g-md-5">
         <div class="col-lg-8">
           
           <h2 class="text-primary fw-bold mb-4">How to File a Claim: Step-by-Step</h2>
@@ -104,68 +104,68 @@
          </div>
 
           <div class="mb-5">
-  <h3 class="h4 fw-bold text-primary mb-4 text-center">Common Insurance Misconceptions</h3>
-  
-  <div class="row g-4">
-    <div class="col-md-6">
-      <div class="card h-100 border-0 shadow-sm overflow-hidden">
-        <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
-          Myth #1: Contractor Choice
-        </div>
-        <div class="card-body">
-          <h5 class="fw-bold mb-2">"I have to use the company my insurance recommends."</h5>
-          <p class="small text-muted mb-0">
-            <strong>The Reality:</strong> In almost every state, including Virginia, you have the legal right to choose your own contractor. While carriers suggest "Preferred Vendors," those vendors often have contracts to minimize costs for the insurance company. Choosing your own independent professional ensures your home's best interest is the only priority.
-          </p>
-        </div>
-      </div>
-    </div>
+          <h3 class="h4 fw-bold text-primary mb-4 text-center">Common Insurance Misconceptions</h3>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
+                  Myth #1: Contractor Choice
+                </div>
+                <div class="card-body">
+                  <h5 class="fw-bold mb-2">"I have to use the company my insurance recommends."</h5>
+                  <p class="small text-muted mb-0">
+                    <strong>The Reality:</strong> In almost every state, including Virginia, you have the legal right to choose your own contractor. While carriers suggest "Preferred Vendors," those vendors often have contracts to minimize costs for the insurance company. Choosing your own independent professional ensures your home's best interest is the only priority.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    <div class="col-md-6">
-      <div class="card h-100 border-0 shadow-sm overflow-hidden">
-        <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
-          Myth #2: Rate Increases
-        </div>
-        <div class="card-body">
-          <h5 class="fw-bold mb-2">"If I file a claim, my rates will automatically go up."</h5>
-          <p class="small text-muted mb-0">
-            <strong>The Reality:</strong> Most homeowners' insurance rate increases are determined by ZIP-code-wide events or regional "acts of God." A single "no-fault" water claim—such as a sudden pipe burst—is exactly what your policy is designed for and rarely triggers an individual rate hike.
-          </p>
-        </div>
-      </div>
-    </div>
+            <div class="col-md-6">
+              <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
+                  Myth #2: Rate Increases
+                </div>
+                <div class="card-body">
+                  <h5 class="fw-bold mb-2">"If I file a claim, my rates will automatically go up."</h5>
+                  <p class="small text-muted mb-0">
+                    <strong>The Reality:</strong> Most homeowners' insurance rate increases are determined by ZIP-code-wide events or regional "acts of God." A single "no-fault" water claim—such as a sudden pipe burst—is exactly what your policy is designed for and rarely triggers an individual rate hike.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    <div class="col-md-6">
-      <div class="card h-100 border-0 shadow-sm overflow-hidden">
-        <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
-          Myth #3: The Deductible
-        </div>
-        <div class="card-body">
-          <h5 class="fw-bold mb-2">"The contractor can waive my insurance deductible."</h5>
-          <p class="small text-muted mb-0">
-            <strong>The Reality:</strong> Requesting or offering to "waive" a deductible is considered insurance fraud in most jurisdictions. The deductible is a legally binding portion of your contract with the carrier and must be paid to the contractor to ensure a legitimate, fully funded restoration.
-          </p>
-        </div>
-      </div>
-    </div>
+            <div class="col-md-6">
+              <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
+                  Myth #3: The Deductible
+                </div>
+                <div class="card-body">
+                  <h5 class="fw-bold mb-2">"The contractor can waive my insurance deductible."</h5>
+                  <p class="small text-muted mb-0">
+                    <strong>The Reality:</strong> Requesting or offering to "waive" a deductible is considered insurance fraud in most jurisdictions. The deductible is a legally binding portion of your contract with the carrier and must be paid to the contractor to ensure a legitimate, fully funded restoration.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    <div class="col-md-6">
-      <div class="card h-100 border-0 shadow-sm overflow-hidden">
-        <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
-          Myth #4: Coverage Limits
-        </div>
-        <div class="card-body">
-          <h5 class="fw-bold mb-2">"Standard policies cover every type of water damage."</h5>
-          <p class="small text-muted mb-0">
-            <strong>The Reality:</strong> Most standard policies cover "sudden and accidental" water loss but exclude "gradual seepage" or "groundwater flooding." This is why professional documentation is vital—we help prove the sudden nature of the loss to ensure your coverage is applied correctly.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                  <div class="bg-primary py-2 px-3 text-white small fw-bold text-uppercase ls-1">
+                    Myth #4: Coverage Limits
+                  </div>
+                  <div class="card-body">
+                    <h5 class="fw-bold mb-2">"Standard policies cover every type of water damage."</h5>
+                    <p class="small text-muted mb-0">
+                      <strong>The Reality:</strong> Most standard policies cover "sudden and accidental" water loss but exclude "gradual seepage" or "groundwater flooding." This is why professional documentation is vital—we help prove the sudden nature of the loss to ensure your coverage is applied correctly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <h3 class="h4 fw-bold text-primary mb-3">Important Documentation Links</h3>
+          <!-- <h3 class="h4 fw-bold text-primary mb-3">Important Documentation Links</h3>
           <p class="small text-muted mb-4">Click below to view or download standard industry forms used during our restoration process:</p>
           <div class="list-group list-group-flush shadow-sm rounded border">
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
@@ -180,7 +180,7 @@
               <div><i class="bi bi-file-earmark-pdf text-danger me-2"></i> Certificate of Completion (COC)</div>
               <span class="badge bg-light text-primary rounded-pill">View PDF</span>
             </a>
-          </div>
+          </div> -->
         </div>
 
         <div class="col-lg-4">

@@ -10,19 +10,20 @@
 
     <section class="py-5">
       <div class="container">
-        <div class="row g-5">
+        <div class="row g-md-5">
           <div class="col-lg-4">
-            <div class="sticky-top" style="top: 100px;">
+            <div class="sticky-top" style="top: 150px;">
               <h3 class="text-primary fw-bold mb-4">Contact Details</h3>
               
               <div class="p-4 mb-4 shadow-sm rounded border-start border-5 border-secondary bg-light">
                 <h6 class="text-uppercase small fw-bold text-muted ls-1">Emergency 24/7</h6>
+                <h6 class="text-uppercase small fw-bold text-muted ls-1">and Non Emergency</h6>
                 <a :href="`tel:${appConfig.phoneRaw}`" class="h4 fw-bold text-decoration-none text-primary d-block">
                   {{ appConfig.phoneNumber }}
                 </a>
               </div>
 
-              <div class="p-4 mb-4 shadow-sm rounded border-start border-5 border-primary bg-white border-top border-end border-bottom">
+              <!-- <div class="p-4 mb-4 shadow-sm rounded border-start border-5 border-primary bg-white border-top border-end border-bottom">
                 <div class="d-flex align-items-start">
                   <i class="bi bi-geo-alt-fill text-secondary fs-4 me-3"></i>
                   <div>
@@ -35,7 +36,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="ps-2">
                 <div class="mb-3">
@@ -51,9 +52,11 @@
           </div>
 
           <div class="col-lg-8">
-            <div class="card border-0 shadow-lg p-4 p-md-5">
+            <div class="card border-0 shadow-lg p-4 p-md-5 mt-4 mt-md-0">
               <h2 class="text-primary fw-bold mb-4">Request a Quote</h2>
-              <QuoteDrawer :is-inline="true" />
+              <ClientOnly>
+                <QuoteDrawer :is-inline="true" />
+              </ClientOnly>
             </div>
           </div>
         </div>

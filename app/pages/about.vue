@@ -13,7 +13,7 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-5 align-items-center">
+      <div class="row g-md-5 align-items-center">
         <div class="col-lg-6">
           <h2 class="text-primary fw-bold mb-4">Integrity in Every Inch</h2>
           <p class="text-muted mb-4">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-lg-6">
-          <div class="position-relative">
+          <div class="position-relative mt-4 mt-md-0">
             <img 
               src="/ec-logo-white.jpg" 
               alt="Class A Contractor team reviewing construction blueprints on-site" 

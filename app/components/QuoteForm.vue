@@ -3,8 +3,18 @@ const instanceId = Math.random().toString(36).substring(2, 9);
 const lowId = `low-${instanceId}`;
 const highId = `high-${instanceId}`;
 
+const formData = ref({
+  name: '',
+  phone: '',
+  location: '',
+  service: '',
+  urgency: 'low',
+  message: ''
+});
+
 const handleSubmit = () => {
-  alert("Quote Request Sent! We'll contact you shortly.");
+  console.log("Submitting form data:", formData.value);
+  alert(`Thank you ${formData.value.name}! Your request has been sent.`);
 };
 </script>
 
@@ -12,12 +22,12 @@ const handleSubmit = () => {
   <form @submit.prevent="handleSubmit" class="row g-3">
     <div class="col-md-6">
       <label class="form-label fw-bold small text-uppercase ls-1">Full Name</label>
-      <input type="text" class="form-control custom-field" placeholder="John Doe" required />
+      <input v-model="formData.name" type="text" class="form-control custom-field" placeholder="John Doe" required />
     </div>
 
     <div class="col-md-6">
       <label class="form-label fw-bold small text-uppercase ls-1">Phone Number</label>
-      <input type="tel" class="form-control custom-field" placeholder="(555) 000-0000" required />
+      <input v-model="formData.phone" type="tel" class="form-control custom-field" placeholder="(555) 000-0000" required />
     </div>
 
     <div class="col-12">
@@ -27,6 +37,7 @@ const handleSubmit = () => {
           <i class="bi bi-geo-alt-fill text-secondary"></i>
         </span>
         <input 
+          v-model="formData.location"
           type="text" 
           class="form-control custom-field border-start-0" 
           placeholder="e.g. Harrisonburg, VA or 22812" 
@@ -37,7 +48,7 @@ const handleSubmit = () => {
 
     <div class="col-12">
       <label class="form-label fw-bold small text-uppercase ls-1">Service Needed</label>
-      <select class="form-select custom-field" required>
+      <select v-model="formData.service" class="form-select custom-field" required>
         <option value="" selected disabled>Select a service...</option>
         <option value="water">Water Damage Restoration</option>
         <option value="mold">Mold Remediation</option>
@@ -50,11 +61,11 @@ const handleSubmit = () => {
       <label class="form-label fw-bold small text-uppercase ls-1">Urgency Level</label>
       <div class="d-flex gap-2">
         <div class="flex-fill">
-          <input class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="lowId" value="low" checked>
+          <input v-model="formData.urgency" class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="lowId" value="low" checked>
           <label class="urgency-tile" :for="lowId">Standard</label>
         </div>
         <div class="flex-fill">
-          <input class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="highId" value="high">
+          <input v-model="formData.urgency" class="d-none urgency-radio" type="radio" :name="`urgency-${instanceId}`" :id="highId" value="high">
           <label class="urgency-tile emergency-tile" :for="highId">Emergency</label>
         </div>
       </div>
@@ -62,7 +73,7 @@ const handleSubmit = () => {
 
     <div class="col-12">
       <label class="form-label fw-bold small text-uppercase ls-1">Message / Details</label>
-      <textarea class="form-control custom-field" rows="3" placeholder="Tell us about the project..."></textarea>
+      <textarea v-model="formData.message" class="form-control custom-field" rows="3" placeholder="Tell us about the project..."></textarea>
     </div>
 
     <div class="col-12 mt-4">

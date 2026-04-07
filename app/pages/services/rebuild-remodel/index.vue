@@ -26,7 +26,7 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-5">
+      <div class="row g-md-5">
         <div class="col-lg-8">
           <h2 class="text-primary fw-bold mb-4">Our Construction Philosophy</h2>
           <p class="lead text-muted">
@@ -75,14 +75,14 @@
 
         <div class="col-lg-4">
           <div class="sticky-top" style="top: 130px;">
-            <div class="card bg-primary text-white p-4 border-0 shadow mb-4">
+            <div class="card bg-primary text-white p-4 border-0 shadow mb-4 mt-4 mt-md-0">
               <h5 class="fw-bold mb-3">Licensed & Insured</h5>
               <p class="small opacity-75">Elevated Construction is a <strong>Class A Contractor</strong> in the state of Virginia. This is the highest tier of licensing, allowing us to manage large-scale structural projects that general handymen cannot.</p>
               <hr class="opacity-25">
               <p class="small mb-0"><strong>License No:</strong> [Add License Number Here]</p>
             </div>
 
-            <div class="card border-0 shadow-sm p-4 text-center">
+            <div class="card border-0 shadow-sm p-4 text-center mt-4">
               <h5 class="fw-bold text-primary mb-3">Ready to Start?</h5>
               <p class="small text-muted mb-4">Don't settle for "good enough." Let's build something exceptional together.</p>
               <button 

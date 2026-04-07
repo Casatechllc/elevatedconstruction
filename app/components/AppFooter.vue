@@ -44,7 +44,7 @@
           <ul class="list-unstyled footer-links">
             <li><NuxtLink to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
             <li><NuxtLink to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
-            <li><NuxtLink to="/services/rebuild-remodel/commercial-remodeling">Commercial Remodeling</NuxtLink></li>
+            <!-- <li><NuxtLink to="/services/rebuild-remodel/commercial-remodeling">Commercial Remodeling</NuxtLink></li> -->
             <li><NuxtLink to="/services/specialty-care/surface-cleaning">Specialty Cleaning</NuxtLink></li>
             <li><NuxtLink to="/services/specialty-care/air-duct-cleaning">Air Duct & HVAC</NuxtLink></li>
           </ul>
@@ -53,7 +53,7 @@
         <div class="col-lg-3 col-md-6">
           <h6 class="fw-bold mb-4 text-uppercase text-secondary footer-links">Information Hub</h6>
           <ul class="list-unstyled footer-links mb-4">
-            <li><NuxtLink to="/info/priority-program" class="fw-bold">First Priority Program</NuxtLink></li>
+            <li><NuxtLink to="/info/priority-program">First Priority Program</NuxtLink></li>
             <li><NuxtLink to="/info/insurance-professionals">Insurance Adjusters</NuxtLink></li>
             <li><NuxtLink to="/info/industries-served">Industries We Serve</NuxtLink></li>
             <li><NuxtLink to="/about">Our Company Story</NuxtLink></li>

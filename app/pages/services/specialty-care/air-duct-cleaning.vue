@@ -21,7 +21,7 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-5">
+      <div class="row g-md-5">
         <div class="col-lg-8">
           <h2 class="text-primary fw-bold mb-4">Total Source Removal vs. Surface Dusting</h2>
           <p class="lead text-muted">
@@ -61,7 +61,7 @@
 
         <div class="col-lg-4">
           <div class="sticky-top" style="top: 130px;">
-            <div class="card border-warning p-4 mb-4 shadow-sm border-top border-5">
+            <div class="card border-warning p-4 mb-4 shadow-sm border-top border-5 mt-4 mt-md-0">
               <h5 class="text-primary fw-bold mb-3"><i class="bi bi-info-circle-fill me-2"></i>When to Call Us</h5>
               <ul class="list-unstyled small mb-0">
                 <li class="mb-3"><strong>Post-Construction:</strong> Drywall dust and sawdust are highly abrasive and will destroy a new HVAC unit if not removed.</li>

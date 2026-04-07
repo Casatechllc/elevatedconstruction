@@ -22,7 +22,7 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-5">
+      <div class="row g-md-5">
         <div class="col-lg-8">
           <h2 class="text-primary fw-bold mb-4">Preparation is the Best Mitigation</h2>
           <p class="lead text-muted">
@@ -94,7 +94,7 @@
 
         <div class="col-lg-4">
           <div class="sticky-top" style="top: 130px;">
-            <div class="card bg-dark text-white p-4 border-0 shadow mb-4">
+            <div class="card bg-dark text-white p-4 border-0 shadow mb-4 mt-4 mt-md-0">
               <h5 class="text-secondary fw-bold mb-3">Reduce Liability</h5>
               <p class="small opacity-75">Documentation is the key to a successful commercial claim. By having a pre-loss file on record, we can prove the pre-existing condition of your facility to the adjuster instantly.</p>
             </div>

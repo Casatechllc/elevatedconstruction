@@ -58,7 +58,7 @@
                 <li><NuxtLink class="dropdown-item" to="/services/disaster-recovery/mold-environmental">Environmental & Mold</NuxtLink></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><NuxtLink class="dropdown-header-link" to="/services/rebuild-remodel">Rebuild & Remodeling</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item fw-bold" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
+                <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/structural-reconstruction">Structural Reconstruction</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/services/rebuild-remodel/residential-remodeling">Residential Remodeling</NuxtLink></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><NuxtLink class="dropdown-header-link" to="/services/specialty-care">Specialty Care</NuxtLink></li>
@@ -75,7 +75,7 @@
                 <li><NuxtLink class="dropdown-item" to="/info/priority-program">First Priority Program</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/info/industries-served">Industries We Serve</NuxtLink></li>
                 <li><NuxtLink class="dropdown-item" to="/info/insurance-professionals">Insurance Professionals</NuxtLink></li>
-                <li><NuxtLink class="dropdown-item" to="/info/resource-center">Resource Center</NuxtLink></li>
+                <!-- <li><NuxtLink class="dropdown-item" to="/info/resource-center">Resource Center</NuxtLink></li> -->
               </ul>
             </li>
             <li class="nav-item">
