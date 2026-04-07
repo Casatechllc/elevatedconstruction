@@ -24,13 +24,13 @@
           >
         </NuxtLink>
 
-        <div class="mobile-title-logo d-flex pt-1 ps-0 align-items-center">
+        <NuxtLink class="mobile-title-logo d-flex pt-1 ps-0 align-items-center" to="/">
         <img 
               src="/ec-title-logo.png" 
               alt="Elevated Construction" 
               class="nav-logo"
             >
-        </div>
+        </NuxtLink>
         
         <button 
           class="navbar-toggler custom-toggler ms-auto m-2" 

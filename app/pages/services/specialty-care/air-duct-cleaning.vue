@@ -28,10 +28,19 @@
             Most residential and commercial HVAC systems circulate the same air 5 to 7 times per day. Over time, this air deposits a "mat" of dust, dander, mold spores, and chemical particulates inside your supply and return plenums.
           </p>
 
-          <div class="my-5 p-4 bg-dark rounded-4 text-center">
-             <i class="bi bi-wind display-1 text-secondary opacity-50"></i>
-             <p class="text-white mt-3 fw-bold">Diagram: The Negative Pressure Cleaning Process</p>
-             <p class="text-white-50 small">Visualizing how we isolate your HVAC system to prevent dust blow-back.</p>
+          <div class="my-5 p-2 p-md-4 bg-dark rounded-4 text-center overflow-hidden shadow-lg">
+            <div class="diagram-wrapper mb-3">
+              <img 
+                src="/negative-pressure-diagram.png" 
+                alt="Diagram of the Elevated Construction Negative Pressure HVAC Cleaning Process" 
+                class="img-fluid rounded-3 shadow-sm"
+              >
+            </div>
+            
+            <p class="text-white mt-3 fw-bold mb-1">The Negative Pressure Cleaning Process</p>
+            <p class="text-white-50 small mb-0 px-3">
+              Visualizing how we isolate your HVAC system to prevent dust blow-back and ensure total source removal.
+            </p>
           </div>
 
           <h3 class="h4 fw-bold text-primary mb-3">The Elevated Cleaning Protocol</h3>
@@ -96,4 +105,25 @@ const appConfig = useAppConfig()
 <style scoped>
 .bg-light { background-color: #f8f9fa !important; }
 .list-group-item { background-color: transparent; border-color: rgba(0,0,0,0.05); }
+
+.diagram-wrapper {
+  transition: transform 0.3s ease;
+  /* cursor: zoom-in; */
+}
+
+.diagram-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.diagram-wrapper img {
+  max-height: 450px; /* Keeps the page from becoming too long */
+  width: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for the dark theme */
+}
+
+@media (max-width: 767.98px) {
+  .diagram-wrapper img {
+    max-height: none; /* Let it be full width on mobile */
+  }
+}
 </style>

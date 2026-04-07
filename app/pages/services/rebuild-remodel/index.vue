@@ -10,13 +10,12 @@
               From restoring structural integrity after a disaster to custom-tailored interior renovations. We combine technical engineering with high-end aesthetics to elevate every square inch of your property.
             </p>
             <div class="d-flex flex-wrap gap-3">
-              <button 
+              <a 
                 class="btn btn-secondary btn-lg rounded-pill px-5 fw-bold shadow"
-                data-bs-toggle="offcanvas" 
-                data-bs-target="#quoteDrawer"
+                :href="`tel:${appConfig.phoneRaw}`"
               >
                 Schedule a Consultation
-              </button>
+            </a>
             </div>
           </div>
         </div>
@@ -36,7 +35,7 @@
           
 
           <div class="row g-4 my-5">
-            <div class="col-md-4" v-for="silo in rebuildSilos" :key="silo.title">
+            <div class="col-md-6" v-for="silo in rebuildSilos" :key="silo.title">
               <div class="card h-100 border-0 shadow-sm p-4 hover-up">
                 <div class="mb-3 text-primary fs-2">
                   <i :class="silo.icon"></i>
@@ -115,13 +114,13 @@ const rebuildSilos = [
     icon: 'bi-house-heart', 
     desc: 'Transforming kitchens, bathrooms, and basements into custom living spaces.',
     link: '/services/rebuild-remodel/residential-remodeling' 
-  },
-  { 
-    title: 'Commercial Remodeling', 
-    icon: 'bi-briefcase', 
-    desc: 'Professional build-outs, tenant improvements, and office renovations.',
-    link: '/services/rebuild-remodel/commercial-remodeling' 
   }
+  // { 
+  //   title: 'Commercial Remodeling', 
+  //   icon: 'bi-briefcase', 
+  //   desc: 'Professional build-outs, tenant improvements, and office renovations.',
+  //   link: '/services/rebuild-remodel/commercial-remodeling' 
+  // }
 ]
 </script>
 

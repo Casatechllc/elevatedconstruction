@@ -19,9 +19,12 @@
             <a :href="`tel:${appConfig.phoneRaw}`" class="d-block text-white text-decoration-none mb-2 hover-secondary">
               <i class="bi bi-telephone-fill text-secondary me-2"></i> {{ appConfig.phoneNumber }}
             </a>
-            <p class="small mb-0 opacity-75">
+            <!-- <p class="small mb-0 opacity-75">
               <i class="bi bi-geo-alt-fill text-secondary me-2"></i> {{ appConfig.address }}
-            </p>
+            </p> -->
+            <a :href="`mailto:${appConfig.email}`" class="d-block text-white text-decoration-none mb-2 hover-secondary small">
+              <i class="bi bi-envelope-fill text-secondary me-2"></i> {{ appConfig.email }}
+            </a>
           </div>
         </div>
 
@@ -80,6 +83,7 @@
           <div class="d-flex justify-content-md-end gap-3 opacity-50 small mt-2 mt-md-0">
             <span>Licensed & Insured</span>
             <span>Class A Contractor</span>
+            <NuxtLink to="/sitemap" class="text-white text-decoration-none hover-secondary">Sitemap</NuxtLink>
           </div>
         </div>
       </div>

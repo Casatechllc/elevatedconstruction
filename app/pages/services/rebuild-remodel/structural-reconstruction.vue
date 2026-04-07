@@ -77,13 +77,13 @@
 
           <div class="bg-dark text-white p-4 rounded-4 shadow-lg mb-5">
             <div class="row align-items-center">
-              <div class="col-md-7">
+              <div>
                 <h4 class="fw-bold text-secondary">The Transformation Journey</h4>
                 <p class="small opacity-75">We document every stage of your rebuild. Our clients love seeing the progress from a charred or flooded shell to a modern, beautiful living space.</p>
               </div>
-              <div class="col-md-5 text-md-end">
+              <!-- <div class="col-md-5 text-md-end">
                 <NuxtLink to="/portfolio" class="btn btn-outline-light rounded-pill px-4">See Our Work</NuxtLink>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

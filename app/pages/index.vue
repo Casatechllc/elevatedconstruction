@@ -116,7 +116,7 @@
             </p>
           </div>
           <div class="col-lg-5 text-lg-end">
-            <NuxtLink to="/info/resource-center" class="btn btn-primary rounded-pill px-4 py-3 fw-bold">
+            <NuxtLink to="/about" class="btn btn-primary rounded-pill px-4 py-3 fw-bold">
               Explore Our Standards
             </NuxtLink>
           </div>

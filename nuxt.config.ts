@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   appConfig: {
     phoneNumber: '(540) 810-0978',
     phoneRaw: '5408100978', // No dashes or spaces for the "tel:" link
-    email: 'info@elevatedconstruction.com',
+    email: 'jordan@elev.construction',
     address: '123 Elevated Way, Bridgewater, VA 22812'
   },
 

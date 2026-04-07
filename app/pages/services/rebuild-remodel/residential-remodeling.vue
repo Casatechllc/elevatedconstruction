@@ -10,16 +10,15 @@
               From gourmet kitchen transformations to spa-like bathroom retreats. We combine elite Class A craftsmanship with personalized design to turn your current house into your forever home.
             </p>
             <div class="d-flex flex-wrap gap-3">
-              <button 
+              <a
                 class="btn btn-secondary btn-lg rounded-pill px-5 fw-bold shadow"
-                data-bs-toggle="offcanvas" 
-                data-bs-target="#quoteDrawer"
+                :href="`tel:${appConfig.phoneRaw}`"
               >
                 Book a Design Consultation
-              </button>
-              <NuxtLink to="/portfolio" class="btn btn-outline-light btn-lg rounded-pill px-4">
+              </a>
+              <!-- <NuxtLink to="/portfolio" class="btn btn-outline-light btn-lg rounded-pill px-4">
                 View Our Gallery
-              </NuxtLink>
+              </NuxtLink> -->
             </div>
           </div>
         </div>
