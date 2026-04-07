@@ -1,15 +1,9 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    // "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"],
-      "@/*": ["./app/*"]
-    }
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.vue",
-    "app/assets/css/main.css" 
-  ]
+    "types": [
+      "@nuxtjs/sitemap",
+      "nuxt-site-config"
+    ]
+  }
 }

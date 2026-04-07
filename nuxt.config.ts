@@ -17,9 +17,41 @@ export default defineNuxtConfig({
     '@/assets/css/main.css'
   ],
 
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
+  site: {
+    url: 'https://elevatedconstructionofthevalley.com/',
+    name: 'Elevated Construction',
+  },
+
+  sitemap: {
+    exclude: [
+      '/services/specialty-care/biohazard-trauma', // Path to the unfinished page
+      '/portfolio',                             // Exclude an entire directory using wildcards
+      '/services/rebuild-remodel/commercial-remodeling',
+      '/info/resource-center'
+    ],
+  },
+
   app: {
     head: {
-      // Adding Bootstrap JS so dropdowns and the Drawers work
+      title: 'Elevated Construction | Restoration & Remodeling in Virginia',
+      meta: [
+        { name: 'description', content: 'Professional water mitigation, mold remediation, and high-end remodeling in the Shenandoah Valley.' },
+        
+        // Open Graph / Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://elevatedconstructionofthevalley.com/' },
+        { property: 'og:title', content: 'Elevated Construction | Virginia Restoration Specialists' },
+        { property: 'og:description', content: '24/7 Emergency Restoration and High-End Remodeling. Serving Harrisonburg, VA and surrounding areas.' },
+        { property: 'og:image', content: 'https://elevatedconstructionofthevalley.com/og-share-image.jpg' },
+
+        // Twitter
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:url', content: 'https://elevatedconstructionofthevalley.com/' },
+        { name: 'twitter:title', content: 'Elevated Construction | Virginia Restoration Specialists' },
+        { name: 'twitter:description', content: 'Professional property restoration and reconstruction with an Elevated touch.' },
+        { name: 'twitter:image', content: 'https://elevatedconstructionofthevalley.com/og-share-image.jpg' }
+      ],
       script: [
         {
           src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',
@@ -27,10 +59,7 @@ export default defineNuxtConfig({
         }
       ],
       link: [
-        { 
-          rel: 'stylesheet', 
-          href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' 
-        },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { 
           rel: 'stylesheet', 
           href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' 

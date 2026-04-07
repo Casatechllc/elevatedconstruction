@@ -15,7 +15,7 @@
           <p class="small opacity-75 mb-4">
             Professional restoration and reconstruction services. We lead with integrity and high-end craftsmanship to restore your peace of mind.
           </p>
-          <div class="contact-info">
+          <div class="contact-info left">
             <a :href="`tel:${appConfig.phoneRaw}`" class="d-block text-white text-decoration-none mb-2 hover-secondary">
               <i class="bi bi-telephone-fill text-secondary me-2"></i> {{ appConfig.phoneNumber }}
             </a>
@@ -28,7 +28,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 right">
           <NuxtLink to="/services/disaster-recovery" class="text-decoration-none">
             <h6 class="fw-bold mb-4 text-uppercase text-secondary">Disaster Recovery</h6>
           </NuxtLink>
@@ -40,7 +40,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 left">
             <NuxtLink to="/services/rebuild-remodel" class="text-decoration-none">
                 <h6 class="fw-bold mb-4 text-uppercase text-secondary">Rebuild & Remodeling</h6>
             </NuxtLink>
@@ -53,7 +53,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 right">
           <h6 class="fw-bold mb-4 text-uppercase text-secondary footer-links">Information Hub</h6>
           <ul class="list-unstyled footer-links mb-4">
             <li><NuxtLink to="/info/priority-program">First Priority Program</NuxtLink></li>
@@ -81,9 +81,10 @@
         </div>
         <div class="col-md-6 text-md-end">
           <div class="d-flex justify-content-md-end gap-3 opacity-50 small mt-2 mt-md-0">
-            <span>Licensed & Insured</span>
-            <span>Class A Contractor</span>
             <NuxtLink to="/sitemap" class="text-white text-decoration-none hover-secondary">Sitemap</NuxtLink>
+            <NuxtLink to="/privacy-policy" class="text-white text-decoration-none hover-secondary border-start ps-3 ps-md-2 ps-lg-3">Privacy Policy</NuxtLink>
+            <NuxtLink to="/terms-of-service" class="text-white text-decoration-none hover-secondary border-start ps-3 ps-md-2 ps-lg-3">Terms</NuxtLink>
+            <NuxtLink to="/accessibility" class="text-white text-decoration-none hover-secondary border-start ps-3 ps-md-2 ps-lg-3">Accessibility</NuxtLink>
           </div>
         </div>
       </div>
@@ -115,13 +116,26 @@ const appConfig = useAppConfig()
   transform: scale(1.05);
 }
 
+@media (max-width: 991.98px) {
+  .footer-logo {
+    max-width: 250px;
+    margin: 0 auto 1.5rem auto; 
+  }
+  .right {
+    text-align: right !important;
+  }
+  .left  {
+    text-align: left !important;
+  }
+}
+
 @media (max-width: 767px) {
   .footer-logo {
     max-width: 250px;
     margin: 0 auto 1.5rem auto; 
   }
   .col-lg-3 {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
