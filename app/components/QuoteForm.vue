@@ -2,6 +2,7 @@
 const instanceId = Math.random().toString(36).substring(2, 9);
 const lowId = `low-${instanceId}`;
 const highId = `high-${instanceId}`;
+const router = useRouter();
 
 const formData = ref({
   name: '',
@@ -9,12 +10,45 @@ const formData = ref({
   location: '',
   service: '',
   urgency: 'low',
-  message: ''
+  message: '',
+  email: ''
 });
 
-const handleSubmit = () => {
-  console.log("Submitting form data:", formData.value);
-  alert(`Thank you ${formData.value.name}! Your request has been sent.`);
+const handleSubmit = async () => {
+  try {
+    const response = await fetch('/.netlify/functions/send-emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData.value)
+    });
+
+    if (response.ok) {
+      // FORCE CLOSE DRAWER
+      if (process.client) {
+        const drawerElement = document.getElementById('quoteDrawer');
+        if (drawerElement) {
+          drawerElement.classList.remove('show');
+          const backdrop = document.querySelector('.offcanvas-backdrop');
+          if (backdrop) backdrop.remove();
+          document.body.style.overflow = '';
+          document.body.classList.remove('modal-open');
+        }
+      }
+
+      // REDIRECT
+      router.push('/thank-you');
+      
+      // RESET FORM
+      formData.value = { 
+        name: '', email: '', phone: '', location: '', 
+        service: '', urgency: 'low', message: '' 
+      };
+    } else {
+      alert("Error sending request. Please try again.");
+    }
+  } catch (err) {
+    console.error("Submission error:", err);
+  }
 };
 </script>
 
@@ -28,6 +62,11 @@ const handleSubmit = () => {
     <div class="col-md-6">
       <label class="form-label fw-bold small text-uppercase ls-1">Phone Number</label>
       <input v-model="formData.phone" type="tel" class="form-control custom-field" placeholder="(555) 000-0000" required />
+    </div>
+
+    <div class="col-md-12">
+      <label class="form-label fw-bold small text-uppercase ls-1">Email</label>
+      <input v-model="formData.email" type="email" class="form-control custom-field" placeholder="name@your-email.com" required />
     </div>
 
     <div class="col-12">

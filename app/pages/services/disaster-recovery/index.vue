@@ -12,21 +12,21 @@
     <Breadcrumbs class="py-3 border-bottom mb-5" />
 
     <section class="container mb-5">
-      <div class="row g-4 mb-5">
-        <div class="col-md-6" v-for="service in services" :key="service.title">
-          <div class="card h-100 border-0 shadow-sm p-4 hover-up">
-            <h4 class="fw-bold text-primary">{{ service.title }}</h4>
-            <p class="small text-muted">{{ service.desc }}</p>
-            <NuxtLink :to="service.link" class="btn btn-link text-primary p-0 fw-bold text-decoration-none">
-              Learn Technical Process →
-            </NuxtLink>
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="row g-4 mb-5">
+            <div class="col-md-6" v-for="service in services" :key="service.title">
+              <div class="card h-100 border-0 shadow-sm p-4 hover-up">
+                <h4 class="fw-bold text-primary">{{ service.title }}</h4>
+                <p class="small text-muted">{{ service.desc }}</p>
+                <NuxtLink :to="service.link" class="btn btn-link text-primary p-0 fw-bold text-decoration-none">
+                  Learn Technical Process →
+                </NuxtLink>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="bg-light p-4 p-lg-5 rounded-4">
-        <div class="row g-5">
-          <div class="col-lg-7">
+          <div class="bg-light p-4 p-lg-5 rounded-4">
             <h2 class="text-primary fw-bold">The Critical Window: The First 24-48 Hours</h2>
             <p>In disaster recovery, time is the primary variable of cost. After 48 hours, clean water becomes "Grey Water" (Category 2), and soot begins to etch into glass and metal surfaces permanently. Our goal is <strong>Stabilization</strong>.</p>
             
@@ -36,15 +36,18 @@
               <li class="mb-2">● <strong>Structural Integrity:</strong> Saturated drywall loses 60% of its structural strength.</li>
               <li class="mb-2">● <strong>Corrosive Soot:</strong> Fire byproducts are highly acidic and will "pitting" appliances if not neutralized.</li>
             </ul>
-          </div>
-          <div class="col-lg-5">
-            <div class="card border-danger p-4">
+
+            <div class="card border-danger p-4 mt-4">
               <h5 class="text-danger fw-bold"><i class="bi bi-exclamation-triangle-fill me-2"></i>Critical Warnings</h5>
               <p class="small mb-2"><strong>Do not enter:</strong> If standing water touches electrical outlets.</p>
               <p class="small mb-2"><strong>Do not clean:</strong> Fire soot with household vacuums; you will blow particulates back into the air.</p>
               <p class="small"><strong>Do not wait:</strong> Insurance companies require "Immediate Mitigation" to honor your claim.</p>
             </div>
           </div>
+        </div>
+
+        <div class="col-lg-4">
+          <SidebarRestoration />
         </div>
       </div>
     </section>

@@ -45,14 +45,12 @@
               <div class="step-num-circle me-3">3</div>
               <div>
                 <h5 class="fw-bold">Assigning an Adjuster</h5>
-                <p class="small text-muted">The carrier will assign a field adjuster. We prefer to be on-site when they arrive to ensure every hidden technical detail (like sub-floor moisture or attic soot) is included in their initial scope.</p>
+                <p class="small text-muted mb-5">The carrier will assign a field adjuster. We prefer to be on-site when they arrive to ensure every hidden technical detail (like sub-floor moisture or attic soot) is included in their initial scope.</p>
               </div>
             </div>
-          </div>
+          </div>          
 
-          
-
-         <div class="bg-light p-4 p-lg-5 rounded-4 mb-5 border-start border-5 border-primary">
+         <div class="bg-light p-4 p-lg-5 rounded-4 mb-5 border-start border-5 border-primary mt-5">
             <div class="mb-4">
                 <h3 class="fw-bold text-primary mb-2">Adjuster & Agent Resources</h3>
                 <p class="text-muted">

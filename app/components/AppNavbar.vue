@@ -2,7 +2,7 @@
   <div class="fixed-top shadow-sm main-nav-wrapper">
     <div class="top-bar d-flex align-items-center">
       <div class="top-bar-left d-none d-sm-flex px-lg-5 ps-3 align-items-center">
-        <span class="motto-text fw-bold text-primary text-uppercase ls-1 small">Water Mitifation, Mold Remediation, Remodels/Repair, Demolition, and Fencing</span>
+        <span class="motto-text fw-bold text-primary text-uppercase ls-1 small">Water Mitigation, Mold Remediation, Remodels/Repair, Demolition, and Fencing</span>
       </div>
       
       <div class="top-bar-right py-2 pe-lg-5 pe-3 d-flex justify-content-end align-items-center ms-auto">
