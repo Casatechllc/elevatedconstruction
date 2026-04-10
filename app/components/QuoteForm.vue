@@ -50,10 +50,13 @@ const handleSubmit = () => {
       <label class="form-label fw-bold small text-uppercase ls-1">Service Needed</label>
       <select v-model="formData.service" class="form-select custom-field" required>
         <option value="" selected disabled>Select a service...</option>
-        <option value="water">Water Damage Restoration</option>
-        <option value="mold">Mold Remediation</option>
-        <option value="fire">Fire & Smoke Damage</option>
+        <option value="water damage">Water Damage Restoration</option>
+        <option value="mold damage">Mold Remediation</option>
+        <option value="fire damage">Fire & Smoke Damage</option>
         <option value="remodel">General Construction/Remodel</option>
+        <option value="specialty care">Specialty Care</option>
+        <option value="insurance query">Insurance Query</option>
+        <option value="frist priority program">First Priority Program</option>
       </select>
     </div>
 
