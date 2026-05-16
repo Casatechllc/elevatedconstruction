@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
   site: {
-    url: 'https://elevatedconstructionofthevalley.com/',
+    url: 'https://elevatedconstructionvacom/',
     name: 'Elevated Construction',
   },
 
@@ -40,17 +40,17 @@ export default defineNuxtConfig({
         
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://elevatedconstructionofthevalley.com/' },
+        { property: 'og:url', content: 'https://elevatedconstructionva.com/' },
         { property: 'og:title', content: 'Elevated Construction | Virginia Restoration Specialists' },
         { property: 'og:description', content: '24/7 Emergency Restoration and High-End Remodeling. Serving Harrisonburg, VA and surrounding areas.' },
-        { property: 'og:image', content: 'https://elevatedconstructionofthevalley.com/og-share-image.jpg' },
+        { property: 'og:image', content: 'https://elevatedconstructionva.com/ec-logo-long-transparent.png' },
 
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:url', content: 'https://elevatedconstructionofthevalley.com/' },
+        { name: 'twitter:url', content: 'https://elevatedconstructionva.com/' },
         { name: 'twitter:title', content: 'Elevated Construction | Virginia Restoration Specialists' },
         { name: 'twitter:description', content: 'Professional property restoration and reconstruction with an Elevated touch.' },
-        { name: 'twitter:image', content: 'https://elevatedconstructionofthevalley.com/og-share-image.jpg' }
+        { name: 'twitter:image', content: 'https://elevatedconstructionva.com/ec-logo-long-transparent.png' }
       ],
       script: [
         {
